@@ -36,7 +36,7 @@ $footer-gradient-background: url(/shelter/assets/noise_transparent@2x.png),
         size: 3.5rem;
     }
     line-height: 130%;
-    letter-spacing: 0.06rem;
+    letter-spacing: 0.21rem;
 }
 
 @mixin h4 {
@@ -47,7 +47,7 @@ $footer-gradient-background: url(/shelter/assets/noise_transparent@2x.png),
         size: 2rem;
     }
     line-height: 115%;
-    letter-spacing: 0.06rem;
+    letter-spacing: 0.12rem;
 }
 
 @mixin h5 {
@@ -58,7 +58,7 @@ $footer-gradient-background: url(/shelter/assets/noise_transparent@2x.png),
         size: 1.5rem;
     }
     line-height: 110%;
-    letter-spacing: 0.06rem;
+    letter-spacing: 0.09rem;
 }
 
 @mixin paragraph_l {
@@ -88,7 +88,7 @@ $footer-gradient-background: url(/shelter/assets/noise_transparent@2x.png),
         weight: normal;
         size: 3.2rem;
     }
-    letter-spacing: 0.2rem;
+    letter-spacing: 0.192rem;
     line-height: 110%;
 }
 
@@ -101,6 +101,37 @@ $footer-gradient-background: url(/shelter/assets/noise_transparent@2x.png),
     }
     line-height: 110%;
     letter-spacing: 0.13rem;
+}
+
+@mixin slider_button {
+    border: solid 3px $color-primary;
+    border-radius: 50%;
+    padding: 1.9rem;
+    background: none;
+}
+
+@mixin button {
+    padding: 1.5rem 4.5rem;
+    font-size: 1.7rem;
+    border-radius: 10rem;
+    line-height: 130%;
+    letter-spacing: 0.108rem;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+@mixin button__primary {
+    background-color: $color-primary;
+    @include button;
+    &:hover {
+        background-color: $color-primary-light;
+    }
+}
+
+@mixin button__secondary($color) {
+    border: solid 2px $color;
+    @include button;
 }
 
 :root {
@@ -232,14 +263,8 @@ $footer-gradient-background: url(/shelter/assets/noise_transparent@2x.png),
     }
 
     &__button {
-        padding: 1.5rem 4.5rem;
         margin-top: 4rem;
-        font-size: 1.7rem;
-        background-color: $color-primary;
-        border-radius: 10rem;
-        line-height: 130%;
-        letter-spacing: 0.11rem;
-        border: none;  
+        @include button__primary;
     }
 }
 
@@ -275,7 +300,6 @@ $footer-gradient-background: url(/shelter/assets/noise_transparent@2x.png),
     &__title {
         span {
             display: block;
-            letter-spacing: 0.2rem;
         }
         color: $color-dark-l;
         @include h3;
@@ -283,12 +307,73 @@ $footer-gradient-background: url(/shelter/assets/noise_transparent@2x.png),
 
     &__description {
         margin-top: 2.5rem;
+
         p {
-            &:nth-child(2) {
+            & + p {
                 margin-top: 2.5rem;
             }
             color: $color-dark-l;  //цвет уточнить! color-dark-xl
             @include paragraph_l;
+        }
+    }
+}
+
+.pets {
+    padding-top: 8rem;
+    padding-bottom: 10rem;
+    &__wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        span {
+            display: block;
+        }
+        max-width: 40rem;
+        text-align: center;
+        color: $color-dark-l;
+        @include h3;
+    }
+
+    &__content {
+        display: flex;
+
+        .pets__cards {
+            display: flex;
+        }
+        
+        .pets__card {
+                display: flex;
+                flex-direction: column;
+
+                &__image {
+                    width: 100%;
+                }
+
+                &__content {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                &__title {
+                    @include h4;
+                    letter-spacing: 0;
+                }
+
+                &__button {
+
+                }
+            }
+
+        .slider__button {
+            @include slider_button;
+        }
+        .slider__button__reverted {
+            transform: rotate(180deg);
+            @include slider_button;
         }
     }
 }
