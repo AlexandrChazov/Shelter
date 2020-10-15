@@ -275,6 +275,7 @@
 }
 
 .pets {
+  background-color: #f6f6f6;
   padding-top: 8rem;
   padding-bottom: 10rem;
 }
@@ -471,6 +472,122 @@
 
 .pets__button:hover {
   background-color: #FDDCC4;
+}
+
+.help {
+  padding-top: 8rem;
+  padding-bottom: 10rem;
+}
+
+.help__wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 4px;
+}
+
+.help__wrapper .help__title {
+  max-width: 30.99rem;
+  text-align: center;
+  color: #545454;
+  font-family: Georgia;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 3.5rem;
+  line-height: 130%;
+  letter-spacing: 0.21rem;
+  margin-bottom: 6rem;
+}
+
+.help__wrapper .help__title span {
+  display: block;
+}
+
+.help__wrapper .help__list__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 102.6rem;
+  width: 100%;
+  color: #545454;
+  margin-bottom: 5.5rem;
+}
+
+.help__wrapper .help__list__top .help__goods {
+  font-family: Georgia;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2rem;
+  line-height: 115%;
+  letter-spacing: 0.12rem;
+  letter-spacing: 0rem;
+  color: #545454;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.help__wrapper .help__list__top .help__goods img {
+  width: 6rem;
+  height: 6rem;
+  margin-bottom: 3.1rem;
+}
+
+.help__wrapper .help__list__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  max-width: 102.6rem;
+  width: 100%;
+  color: #545454;
+  padding: 0 21px;
+}
+
+.help__wrapper .help__list__bottom .help__goods {
+  font-family: Georgia;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2rem;
+  line-height: 115%;
+  letter-spacing: 0.12rem;
+  letter-spacing: 0rem;
+  color: #545454;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.help__wrapper .help__list__bottom .help__goods img {
+  width: 6rem;
+  height: 6rem;
+  margin-bottom: 3.1rem;
 }
 
 @media screen and (max-width: 1280px) {
