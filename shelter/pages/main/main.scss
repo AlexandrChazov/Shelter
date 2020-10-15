@@ -485,6 +485,59 @@ $card__hover: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
 }
 
+.donation {
+    padding-top: 8rem;
+    padding-bottom: 10rem;
+
+    &__wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 4px;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__information {
+        display: flex;
+        flex-direction: column;
+        h3 {
+            @include h3;
+            color: $color-dark-l;
+            max-width: 30rem;
+        }
+        h5 {
+            @include h5;
+            color: $color-dark-l;
+        }
+        .credit__card {
+            max-width: 34.9rem;
+            height: 4.3rem;
+            background-color: $color-primary;
+            &__content {
+                display: flex;
+                justify-content: space-between;
+                max-width: 31.9rem;
+                @include h4;
+                color: $color-dark-l;
+                img {
+                    width: 3rem;
+                    height: 2.3rem;
+                }
+            }
+        }
+        p {
+            font-size: 1.2rem;
+            color: $color-dark-m;
+        }
+    }
+
+}
+
 @media screen and (max-width: 1280px) {
     .wrapper {
         padding: 0 4rem;

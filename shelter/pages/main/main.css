@@ -590,6 +590,99 @@
   margin-bottom: 3.1rem;
 }
 
+.donation {
+  padding-top: 8rem;
+  padding-bottom: 10rem;
+}
+
+.donation__wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 4px;
+}
+
+.donation__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.donation__information {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.donation__information h3 {
+  font-family: Georgia;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 3.5rem;
+  line-height: 130%;
+  letter-spacing: 0.21rem;
+  color: #545454;
+  max-width: 30rem;
+}
+
+.donation__information h5 {
+  font-family: Georgia;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.5rem;
+  line-height: 110%;
+  letter-spacing: 0.09rem;
+  color: #545454;
+}
+
+.donation__information .credit__card {
+  max-width: 34.9rem;
+  height: 4.3rem;
+  background-color: #F1CDB3;
+}
+
+.donation__information .credit__card__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 31.9rem;
+  font-family: Georgia;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2rem;
+  line-height: 115%;
+  letter-spacing: 0.12rem;
+  color: #545454;
+}
+
+.donation__information .credit__card__content img {
+  width: 3rem;
+  height: 2.3rem;
+}
+
+.donation__information p {
+  font-size: 1.2rem;
+  color: #b2b2b2;
+}
+
 @media screen and (max-width: 1280px) {
   .wrapper {
     padding: 0 4rem;
