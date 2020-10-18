@@ -19,7 +19,7 @@ $footer-gradient-background: url(../../assets/noise_transparent@2x.png),
     radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%),
     #211F20;
 
-$card__hover: 0px 4px 4px rgba(0, 0, 0, 0.25);
+$card__hover: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
 
 @mixin h2 {
     font: {
@@ -160,19 +160,6 @@ $card__hover: 0px 4px 4px rgba(0, 0, 0, 0.25);
     @include button;
 }
 
-/*@mixin help__icons__h4 {   
-    letter-spacing: 0rem;
-    color: $color-dark-l;
-    img {
-        width: 6rem;
-        height: 6rem;
-        margin-bottom: 3.1rem;
-    }
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}*/
-
 :root {
     font-size: 10px;
 }
@@ -199,11 +186,39 @@ $card__hover: 0px 4px 4px rgba(0, 0, 0, 0.25);
     max-width: 100%;
     position: absolute;
     top: 6rem;
-}
 
-.menu {
-    width: 44.3rem;
-    display: flex;
+    .nav {
+        width: 44.3rem;
+        display: flex;
+
+        .nav__list {
+            width: 100%; 
+            display: flex;
+            justify-content: space-between;
+            list-style-type: none;  
+
+            &__item {
+                display: flex;
+                align-items: center;
+            }
+
+            &__link {
+                color: $color-light-xl;
+                font-family: Arial;
+                font-size: 1.5rem;
+                font-weight: 400;
+                line-height: 160%;
+
+                &__active {
+                    border-bottom: solid 0.3rem $color-primary;
+                }
+
+                &__disabled {
+                    color: $color-dark-s;
+                }
+            }
+        }
+    }
 }
 
 .logo {
@@ -222,35 +237,6 @@ $card__hover: 0px 4px 4px rgba(0, 0, 0, 0.25);
     @include logo_subtitle();
     }
 }
-
-.list {  //свойства этого класса перенесены в другое место
-    width: 100%; 
-    display: flex;
-    justify-content: space-between;
-    list-style-type: none;     
-
-    &__item {
-        display: flex;
-        align-items: center;
-        
-        &__link {
-            color: $color-light-xl;
-            font-family: Arial;
-            font-size: 1.5rem;
-            font-weight: 400;
-            line-height: 160%;        //исправить!!!
-
-            &__active {
-            border-bottom: solid 0.3rem $color-primary;
-            }
-
-            &__disabled {
-            color: $color-dark-s;
-            }
-        }
-    }
-}
-
 
 .main {     
     display: flex;
@@ -377,7 +363,7 @@ $card__hover: 0px 4px 4px rgba(0, 0, 0, 0.25);
         @include h3;
     }
 
-    &__content {
+    &__slider {
         display: flex;
         align-items: center;
 
@@ -387,36 +373,36 @@ $card__hover: 0px 4px 4px rgba(0, 0, 0, 0.25);
         }
         
         .pets__card {
+            display: flex;
+            flex-direction: column;
+            border-radius: 0.9rem;
+            margin: 0 4.5rem;
+
+            &:hover {
+                box-shadow: $card__hover;
+            }
+
+            &__image {
+                width: 100%;
+            }
+
+            &__content {
                 display: flex;
                 flex-direction: column;
-                border-radius: 0.9rem;
-                margin: 0 4.5rem;
-
-                &:hover {
-                    box-shadow: $card__hover;
-                }
-
-                &__image {
-                    width: 100%;
-                }
-
-                &__content {
-                    display: flex;
-                    flex-direction: column;
-                    padding-bottom: 3rem;
-                    align-items: center;
-                }
-
-                &__title {
-                    margin: 3rem 0;
-                    text-align: center;
-                    @include h4;
-                }
-
-                &__button {
-                    @include button__secondary;
-                }
+                padding-bottom: 3rem;
+                align-items: center;
             }
+
+            &__title {
+                margin: 3rem 0;
+                text-align: center;
+                @include h4;
+            }
+
+            &__button {
+                @include button__secondary;
+            }
+        }
 
         .slider__button {
             @include slider_button;
