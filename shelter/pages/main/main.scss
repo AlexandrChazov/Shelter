@@ -297,17 +297,15 @@ $card__hover: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
 
     &__wrapper {
         display: flex;
-        justify-content: space-between;
-        width: 100%;
-        padding: 8rem 17.5rem 10rem 17.5rem;
-    }
-
-    /*.wrapper {
         justify-content: center;
-    }*/
+        width: 100%;
+        padding-top: 8rem;
+        padding-bottom: 10rem;
+    }
 
     &__image__wrapper {
         display: flex;
+        margin-right: 12rem;
     }
 
     &__image {
@@ -318,7 +316,7 @@ $card__hover: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
         display: flex;
         justify-content: center;
         flex-direction: column;
-        max-width: 43rem;
+        width: 43rem;
     }
 
     &__title {
@@ -394,7 +392,7 @@ $card__hover: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
             }
 
             &__title {
-                margin: 3rem 0;
+                margin: 3.1rem 0;
                 text-align: center;
                 @include h4;
             }
@@ -470,6 +468,7 @@ $card__hover: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
     }
 
     &__image__wrapper {
+        margin-top: 0.4rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -493,14 +492,14 @@ $card__hover: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
     }
 
     &__subtitle {
-        margin-top: 2rem;
+        margin-top: 2.5rem;
         color: $color-dark-l;
         @include h5;
     }
 
     &__payment {
         @include button__primary();
-        margin-top: 2rem;
+        margin-top: 1.7rem;
         padding: 1rem 1.5rem;
         border-radius: 1rem;
         display: flex;
@@ -521,7 +520,7 @@ $card__hover: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
 }
 
 .footer {
-    padding-top: 4rem;
+    padding-top: 3.7rem;
     background: $footer-gradient-background;
 
     &__content {
@@ -540,6 +539,7 @@ $card__hover: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
         justify-content: space-between;
 
         &__title {
+            padding-top: 0.4rem;
             color: $color-light-xl;
             @include h3();
 
@@ -570,18 +570,135 @@ $card__hover: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
     }
 }
 
-@media screen and (max-width: 1280px) {
-    .wrapper {
-        padding: 0 4rem;
+@media screen and (max-width: 1279px) {
+    .header {
+        top: 3rem;
+
+        .wrapper {
+            margin: 0 3rem 0 3rem;
+        }
+    }
+
+    .hero {
+        
+        padding-top: 15rem;
+
+        &__wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .hero__button__wrapper {
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+        &__image {
+            max-width: 56.9rem;
+            max-height: 59.3rem;
+
+            &__wrapper {
+                margin-top: 2rem;
+                margin-left: 14rem;
+            }
+        }
+
+    }
+
+    .about {
+    
+        &__wrapper {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+
+            .about__image__wrapper {
+                margin-top: 8rem;
+                margin-right: 0rem;
+            }
+        }
+    }
+
+    .pets {
+        .pets__card__woody {
+            display: none;
+        }
+
+        &__cards {
+            
+            .pets__card {
+            margin: 0 2rem;
+            }
+        }
+        
+
+        &__card__image {
+            width: 27rem;
+            height: 27rem;
+        }
+        
+
+        // .slider__button__reverted {
+        //     margin-right: 3.2rem;
+        // }
+    }
+
+    .help {
+    
+        &__content {
+            
+            display: grid;
+            grid-template-columns: auto auto auto;
+            column-gap: 7rem;
+            row-gap: 5.5rem;
+        }
+    }
+
+    .donation {
+        &__wrapper {
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+
+        &__content {
+            margin-left: 0rem;
+        }
+
+        &__subtitle {
+            margin-top: 2rem;
+        }
+
+        &__payment {
+            margin-top: 2rem;
+        }
+
+        &__image__wrapper {
+            margin-top: 6rem;
+        }
+    }
+
+    .footer {
+        padding-top: 2.4rem;
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__contacts__mail {
+            margin-top: 4rem;
+            margin-bottom: 4rem;
+        }
+
+        &__content {
+            width: 100%;
+            justify-content: space-evenly;
+            margin-top: 0;
+            padding-right: 0;
+        }
     }
 }
 
-@media screen and (max-width: 1100px) {
-    .hero__content {
-        flex-direction: column;
-    }
-
-    .hero__content {
-        align-items: center;
-    }
-}
+    
