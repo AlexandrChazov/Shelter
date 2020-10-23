@@ -273,6 +273,8 @@ $card__hover: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
 
         
     &__title {
+        display: flex;
+        flex-direction: column;
         max-width: 31rem;
         color: $color-light-xl;
         @include h2;
@@ -343,7 +345,7 @@ $card__hover: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
 .pets {
     background-color: $color-light-l;
     padding-top: 8rem;
-    padding-bottom: 10rem;
+    padding-bottom: 9.8rem;
     &__wrapper {
         width: 100%;
         display: flex;
@@ -459,8 +461,8 @@ $card__hover: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
 }
 
 .donation {
-    padding-top: 8rem;
-    padding-bottom: 10.3rem;
+    padding-top: 7.9rem;
+    padding-bottom: 10rem;
 
     &__wrapper {
         display: flex;
@@ -468,7 +470,7 @@ $card__hover: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
     }
 
     &__image__wrapper {
-        margin-top: 0.4rem;
+        margin-top: 0.2rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -492,14 +494,14 @@ $card__hover: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
     }
 
     &__subtitle {
-        margin-top: 2.5rem;
+        margin-top: 2.1rem;
         color: $color-dark-l;
         @include h5;
     }
 
     &__payment {
         @include button__primary();
-        margin-top: 1.7rem;
+        margin-top: 2.1rem;
         padding: 1rem 1.5rem;
         border-radius: 1rem;
         display: flex;
@@ -520,7 +522,7 @@ $card__hover: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
 }
 
 .footer {
-    padding-top: 3.7rem;
+    padding-top: 4rem;
     background: $footer-gradient-background;
 
     &__content {
@@ -581,7 +583,7 @@ $card__hover: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
 
     .hero {
         
-        padding-top: 15rem;
+        padding-top: 15.2rem;
 
         &__wrapper {
             display: flex;
@@ -603,6 +605,15 @@ $card__hover: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
                 margin-left: 14rem;
             }
         }
+
+        .content__section__title {
+            padding-left: 0.3rem;
+        }
+
+        .content__section__subtitle {
+            padding-left: 0.4rem;
+        }
+        
 
     }
 
@@ -656,6 +667,9 @@ $card__hover: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
     }
 
     .donation {
+        padding-top: 8rem;
+        padding-bottom: 10.1rem;
+
         &__wrapper {
             flex-direction: column-reverse;
             align-items: center;
@@ -679,7 +693,7 @@ $card__hover: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
     }
 
     .footer {
-        padding-top: 2.4rem;
+        padding-bottom: 0;
 
         .wrapper {
             display: flex;
@@ -694,10 +708,32 @@ $card__hover: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
 
         &__content {
             width: 100%;
-            justify-content: space-evenly;
             margin-top: 0;
             padding-right: 0;
+            margin-bottom: 6.2rem;
         }
+    }
+
+    /**/
+    .footer {
+        padding-top: 2.8rem;
+    }
+
+    .footer__content {
+        display: grid;
+        grid-template-columns: 35rem 35rem;
+        justify-content: center;
+        column-gap: 1rem;
+    }
+
+    .footer__contacts__responsive {
+        //width: 100%;
+        padding-left: 3.5rem;
+    }
+
+    .footer__locations__responsive {
+        //width: 100%;
+        padding-left: 1.4rem;
     }
 }
 
@@ -1052,6 +1088,48 @@ $card__hover: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
 
         .footer__image {
             max-width: 26rem;
+        }
+    }
+
+    .footer {
+        
+        .footer__content {
+            grid-template-columns: auto;
+        }
+
+        .footer__contacts__responsive {
+            padding: 0;
+        }
+
+        .footer__locations__responsive {
+            padding-top: 0.8rem;
+            align-items: center;
+            padding-left: 0;
+        }
+
+        .footer .footer__contacts__title,
+        .footer .footer__locations__title {
+            padding: 0;
+        }
+
+        .footer__contacts__title,
+        .footer__locations__title {
+            padding: 0;
+        }
+
+        .footer__contacts__span {
+            display: inline;
+        }
+
+        .footer__locations__span {
+            display: inline;
+        }
+
+        .footer__locations__address {
+            margin-top: 4rem;
+            width: 100%;
+            padding-left: 1rem;
+            text-align: start;
         }
     }
 }
