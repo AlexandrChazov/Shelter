@@ -903,8 +903,8 @@
     max-width: 100%;
   }
   .hero .content__section__subtitle {
+    width: 30rem;
     text-align: center;
-    letter-spacing: 0.04rem;
   }
   .hero .content__section__button {
     margin-top: 4.2rem;
@@ -985,6 +985,7 @@
   }
   .help {
     padding-top: 0;
+    padding-bottom: 0rem;
   }
   .help .help__title {
     font-size: 2.5rem;
@@ -992,16 +993,123 @@
   }
   .help .help__item__title {
     font-size: 1.5rem;
+    margin: 2rem -0.5rem 0 0.5rem;
   }
   .help .help__content {
+    display: -ms-grid;
+    display: grid;
     margin-top: 4.3rem;
     -ms-grid-columns: auto auto;
         grid-template-columns: auto auto;
-    row-gap: 2rem;
+    row-gap: 3rem;
+    -webkit-column-gap: 4rem;
+            column-gap: 4rem;
   }
   .help .help__item__icon {
     max-width: 5rem;
     max-height: 5rem;
+  }
+  .help .help__item {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .donation {
+    padding-top: 8.5rem;
+    padding-bottom: 4.3rem;
+  }
+  .donation .donation__title {
+    font-size: 2.5rem;
+    text-align: center;
+    letter-spacing: 0.15rem;
+  }
+  .donation .donation__content {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .donation .donation__subtitle {
+    margin-top: 2.4rem;
+    letter-spacing: 0rem;
+  }
+  .donation .donation__payment {
+    margin-top: 2.3rem;
+  }
+  .donation .donation__payment__text {
+    font-size: 1.5rem;
+    letter-spacing: 0.09rem;
+    padding-left: 1.3rem;
+  }
+  .donation .donation__description {
+    text-align: justify;
+    max-width: 28rem;
+  }
+  .donation .donation__image__wrapper {
+    margin-top: 4.2rem;
+  }
+  .donation .donation__image {
+    max-width: 26rem;
+  }
+  .footer .footer__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 3.7rem;
+  }
+  .footer .footer__contacts,
+  .footer .footer__locations {
+    text-align: center;
+    margin-bottom: 3.4rem;
+  }
+  .footer .footer__locations {
+    width: 100%;
+    margin-bottom: 0rem;
+  }
+  .footer .footer__contacts__title,
+  .footer .footer__locations__title {
+    padding-top: 0.6rem;
+    font-size: 2.5rem;
+    letter-spacing: 0.15rem;
+  }
+  .footer .footer__contacts__span {
+    display: inline;
+  }
+  .footer .footer__contacts__mail {
+    padding-left: 3.4rem;
+  }
+  .footer .footer__contacts__phone {
+    padding-left: 4rem;
+  }
+  .footer .footer__locations__title {
+    width: 29rem;
+    padding-left: 3.1rem;
+  }
+  .footer .footer__locations__span {
+    display: inline;
+  }
+  .footer .footer__locations__address {
+    margin-top: 4rem;
+    padding-left: 1rem;
+  }
+  .footer .footer__locations__address__place1 {
+    margin-left: 2rem;
+    text-align: left;
+  }
+  .footer .footer__image__wrapper {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .footer .footer__image {
+    max-width: 26rem;
   }
 }
 /*# sourceMappingURL=main.css.map */
