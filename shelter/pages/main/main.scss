@@ -223,7 +223,7 @@ $card__hover: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
 
 .logo {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; ///////////////////////////////////////
 
     &__title {
         color: $color-primary;
@@ -738,71 +738,7 @@ $card__hover: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
 }
 
 @media screen and (max-width: 767px) {
-    // .header .nav .nav__list__link {
-    //     color: $color-light-s;
-    //     font-family: Arial;
-    //     font-size: 3.2rem;
-    //     font-weight: 400;
-    //     line-height: 160%;
-    // }
-
-    // .header {
-    //     top: 0;
-
-    //     .wrapper {
-    //         margin: 0;
-    //     }
-
-    //     .hamburger__menu {
-    //         width: 3rem;
-    //         height: 2.2rem;
-    //         position: absolute;
-    //         top: 5rem;
-    //         right: 5.3rem;
-    //         cursor: pointer;
-    //         display: flex;
-    //         flex-direction: column;
-    //         justify-content: space-between;
-    //     }
-    
-    //     .container {
-    //         top: 0;
-    //     }
-
-    //     .logo {
-    //         position: absolute;
-    //         top: 3rem;
-    //         left: 1rem;
-    //     }
-    
-    //     .nav {
-    //         width: 100%;
-    //         display: flex;
-    //         justify-content: center;
-    //     }
-    
-    //     .nav__list {
-    //         width: 100%;
-    //         flex-direction: column;
-    //         align-items: center;
-    //         row-gap: 4rem;
-    //     }    
-    
-    //     .navbar {
-    //         width: 32rem;
-    //         height: 82.3rem;
-    //         background-color: $color-dark-3xl;
-    //         top: 0;
-    //         right: 0;
-    //         align-items: center;
-    //     }
-    
-    //     .line {
-    //         width: 100%;
-    //         height: 0.2rem;
-    //         background-color: $color-primary;
-    //     }
-    // }
+   
     .header {
         top: 0;
 
@@ -815,6 +751,7 @@ $card__hover: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
         }
 
         .hamburger__menu {
+                    z-index: 2;
                     width: 3rem;
                     height: 2.2rem;
                     position: absolute;
@@ -824,13 +761,18 @@ $card__hover: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
+                    transition: all 0.5s;
         }
 
-                
+        .burger__change {
+            transform: rotateZ(90deg);
+        }
+    
         .line {
             width: 100%;
             height: 0.2rem;
             background-color: $color-primary;
+            
         }
     }
 
@@ -1132,6 +1074,10 @@ $card__hover: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
             text-align: start;
         }
     }
+}
+
+.logo__change {
+    display: none;
 }
 
     

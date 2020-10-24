@@ -6,8 +6,43 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Shelter</title>
     <link href="./main.css" rel="stylesheet">
+    <link rel="stylesheet" href="./burger.css">
 </head>
 <body>
+    <div class="sidebar2">
+        <div class="logo2">
+            <div class="logo__title2">
+                Cozy House
+            </div>
+            <div class="logo__subtitle2">
+                Shelter for pets in Boston
+            </div>
+        </div>
+        <nav class="nav2">
+            <ul class="nav__list2">
+                <li class="nav__list__item2">
+                    <a class="nav__list__link2 nav__list__link__active2">
+                       About the shelter
+                    </a>
+                </li>
+                <li class="nav__list__item2">
+                    <a class="nav__list__link2 nav__list__link__disabled2">
+                       Our pets
+                    </a>
+                </li>
+                <li class="nav__list__item2">
+                    <a class="nav__list__link2 nav__list__link__disabled2">
+                       Help the shelter
+                    </a>
+                </li>
+                <li class="nav__list__item2">
+                    <a class="nav__list__link2 nav__list__link__disabled2">
+                       Contacts
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
     <header class="header">
         <div class="wrapper">
             <div class="logo">
@@ -35,7 +70,7 @@
                         </a>
                     </li>
                     <li class="nav__list__item">
-                        <a href="../pets/pets.html" class="nav__list__link nav__list__link__disabled">
+                        <a class="nav__list__link nav__list__link__disabled">
                            Our pets
                         </a>
                     </li>
@@ -110,7 +145,7 @@
                     </button>
 
                     <div class="pets__cards">
-                        <div class="pets__card">
+                        <div class="pets__card" id="pet_0">
                             <img src="../../assets/images/pets/pets-katrine.png" alt="Katrine photo" class="pets__card__image">
                             <div class="pets__card__content">
                                 <h4 class="pets__card__title">
@@ -122,7 +157,7 @@
                             </div>
                         </div>
 
-                        <div class="pets__card">
+                        <div class="pets__card" id="pet_1">
                             <img src="../../assets/images/pets/pets-jennifer.png" alt="Jennifer photo" class="pets__card__image">
                             <div class="pets__card__content">
                                 <h4 class="pets__card__title">
@@ -134,7 +169,7 @@
                             </div>
                         </div>
 
-                        <div class="pets__card pets__card__woody">
+                        <div class="pets__card pets__card__woody" id="pet_2">
                             <img src="../../assets/images/pets/pets-woody.png" alt="Woody photo" class="pets__card__image">
                             <div class="pets__card__content">
                                 <h4 class="pets__card__title">
@@ -273,5 +308,7 @@
             
         </div>
     </footer>
+    <script src="../../assets/js/random.js"></script>
+    <script src="./main.js"></script>
 </body>
 </html>
