@@ -120,45 +120,6 @@ let fullPetsList = []; // 48
     return tempArr;
   })();
 
-  
-
-  /*document.querySelector("#currentPage").innerText = (currentPage+1).toString();
-
-  for (let i = 0; i < (fullPetsList.length / 6); i++) {
-    const stepList = fullPetsList.slice(i * 6, (i * 6) + 6);
-
-    for (let j = 0; j < 6; j++) {
-      stepList.forEach((item, ind) => {
-        if ( item.name === stepList[j].name && (ind !== j) ) {
-          document.querySelector("#pets").children[(i * 6) + j].style.border = '5px solid red';
-        }
-      })
-    }
-  }*/
-
-// request.onload = () => {
-//   pets = JSON.parse(request.response);
-
-
-// }
-/*
-const createPets = (petsList) => {
-  const elem = document.querySelector("#pets");
-  elem.innerHTML += createElements(petsList);
-}
-
-createPets(fullPetsList);
-
-createElements = (petsList) => {
-  let str = '';
-  for (let i = 0; i < petsList.length; i++) {
-    str += `<img src=" ${ petsList[i].img } ">`;
-  }
-  return str;
-}*/
-
-
-//request.send();
 
 const sort863 = (list) => {
   let unique8List = [];
@@ -212,43 +173,13 @@ const sort6recursively = (list) => {
 
   return list;
 }
-/* код ниже создаёт слайдер
-let currentPage = 0;
-document.querySelector("#prevPage").addEventListener('click', (e) => {
-  if (currentPage > 0) {
-    currentPage--;
-    console.log(currentPage+1);
-  }
-  document.querySelector("#pets").style.top = `calc(35px - ${190 * currentPage}px)`;
-  document.querySelector("#currentPage").innerText = (currentPage+1).toString();
 
-});
 
-document.querySelector("#nextPage").addEventListener('click', (e) => {
-  if (currentPage < (document.querySelector("#pets").offsetHeight / 190) - 1) {
-    currentPage++;
-    console.log(currentPage+1);
-  }
-
-  document.querySelector("#pets").style.top = `calc(35px - ${190 * currentPage}px)`;
-  document.querySelector("#currentPage").innerText = (currentPage+1).toString();
-});
-
-(fullPetsList / itemsPerPage)
-
-// let itemsPerPage = 8;
-
-// const checkItemsPerPage = () => {
-//   if (document.querySelector("body").offsetWidth > 768 && document.querySelector("body").offsetWidth < 1280) {
-//     itemsPerPage = 6;
-
-//   }
-// }*/
 fullPetsList = sort863(fullPetsList);
 
 
 
-// Первая картинка
+// Изменяем содержание карточек питомцев
 let pet_0 = document.getElementById("pet_0");
     pet_0.children[0].src = fullPetsList[0].img;
     pet_0.children[0].alt = fullPetsList[0].alt;
@@ -263,5 +194,30 @@ let pet_2 = document.getElementById("pet_2");
     pet_2.children[0].src = fullPetsList[2].img;
     pet_2.children[0].alt = fullPetsList[2].alt;
     pet_2.children[1].children[0].innerText = fullPetsList[2].name;
+
+let pet_3 = document.getElementById("pet_3");
+    pet_3.children[0].src = fullPetsList[3].img;
+    pet_3.children[0].alt = fullPetsList[3].alt;
+    pet_3.children[1].children[0].innerText = fullPetsList[3].name;
+
+let pet_4 = document.getElementById("pet_4");
+    pet_4.children[0].src = fullPetsList[4].img;
+    pet_4.children[0].alt = fullPetsList[4].alt;
+    pet_4.children[1].children[0].innerText = fullPetsList[4].name;
+
+let pet_5 = document.getElementById("pet_5");
+    pet_5.children[0].src = fullPetsList[5].img;
+    pet_5.children[0].alt = fullPetsList[5].alt;
+    pet_5.children[1].children[0].innerText = fullPetsList[5].name;
+
+let pet_6 = document.getElementById("pet_6");
+    pet_6.children[0].src = fullPetsList[6].img;
+    pet_6.children[0].alt = fullPetsList[6].alt;
+    pet_6.children[1].children[0].innerText = fullPetsList[6].name;
+
+let pet_7 = document.getElementById("pet_7");
+    pet_7.children[0].src = fullPetsList[7].img;
+    pet_7.children[0].alt = fullPetsList[7].alt;
+    pet_7.children[1].children[0].innerText = fullPetsList[7].name;
 
 //document.querySelector("body > main > div.pets > div > div > div > div:nth-child(1) > img").src = fullPetsList[0].img
