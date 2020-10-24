@@ -1,0 +1,90 @@
+.popup {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 13.4rem;
+}
+
+.popup__wrapper {
+    max-width: 95.2rem;
+    max-height: 55.2rem;
+    margin-left: 5rem;
+}
+
+.popup__button {
+    text-align: right;
+    margin-right: 0.8rem;
+}
+
+.popup__window {
+    background: #FAFAFA;
+    border-radius: 9px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 5rem;
+
+    img {
+        width: 50rem;
+        height: 50rem;
+    }
+
+    h3 {
+        font-family: Georgia;
+        font-size: 3.5rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 4.5rem;
+        letter-spacing: 0.2rem;
+        text-align: left;
+    }
+
+    h4 {
+        margin-top: 1rem;
+        font-family: Georgia;
+        font-size: 2.0rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 2.3rem;
+        letter-spacing: 0.12rem;
+        text-align: left;
+    }
+
+    h5 {
+        max-width: 35rem;
+        font-family: Georgia;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.7rem;
+        letter-spacing: 0.09rem;
+        text-align: left;
+        margin: 4rem 0 4rem 0;
+    }
+
+    p {
+        font-family: Georgia;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.7rem;
+        letter-spacing: 0.06rem;
+        text-align: left;
+        margin-top: 1.1rem;
+
+        .popup__dot {
+            color: #F1CDB3;
+            margin-right: 0.4rem;
+        }
+    }
+
+    .popup_span_1 {
+        font-weight: 700;
+    }
+}
+
+.popup__content {
+    margin: 0 2rem 4rem 3rem;
+}
