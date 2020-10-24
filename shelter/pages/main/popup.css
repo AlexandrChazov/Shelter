@@ -1,7 +1,19 @@
-.popup {
-  position: absolute;
-  width: 100%;
+.dark {
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup {
+  z-index: 1;
+  position: fixed;
+  top: 30%;
+  right: 50%;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -101,6 +113,8 @@
 @media screen and (max-width: 1279px) {
   .popup {
     margin-top: 21rem;
+    right: 50%;
+    top: 20%;
   }
   .popup__wrapper {
     max-width: 68.2rem;
@@ -130,6 +144,8 @@
 @media screen and (max-width: 767px) {
   .popup {
     margin-top: 16.8rem;
+    right: 50%;
+    top: 20%;
   }
   .popup__button {
     margin-right: 2rem;
