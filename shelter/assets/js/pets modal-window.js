@@ -11,6 +11,7 @@ pet_3.addEventListener('click', () => {
 
     overlay.classList.add('dark');
     popup.classList.remove('popup__hide');
+    scroll_off();
 });
 
 pet_4.addEventListener('click', () => {
@@ -25,6 +26,7 @@ pet_4.addEventListener('click', () => {
 
     overlay.classList.add('dark');
     popup.classList.remove('popup__hide');
+    scroll_off();
 });
 
 pet_5.addEventListener('click', () => {
@@ -39,6 +41,7 @@ pet_5.addEventListener('click', () => {
 
     overlay.classList.add('dark');
     popup.classList.remove('popup__hide');
+    scroll_off();
 });
 
 pet_6.addEventListener('click', () => {
@@ -53,6 +56,7 @@ pet_6.addEventListener('click', () => {
 
     overlay.classList.add('dark');
     popup.classList.remove('popup__hide');
+    scroll_off();
 });
 
 pet_7.addEventListener('click', () => {
@@ -67,4 +71,5 @@ pet_7.addEventListener('click', () => {
 
     overlay.classList.add('dark');
     popup.classList.remove('popup__hide');
+    scroll_off();
 });

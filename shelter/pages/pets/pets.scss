@@ -165,7 +165,7 @@ $card__hover: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
     align-items: center;
     width: 100vw;
     max-width: 100%;
-    //position: sticky;
+    position: fixed;
     min-height: 12rem;
     background-color: $color-light-xl;
 
@@ -216,8 +216,10 @@ $card__hover: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
 }
 
 .main {
+    background-color: $color-light-l;
+
     &__wrapper {
-        padding-top: 8rem;
+        padding-top: 20rem;
         padding-bottom: 10rem;
         flex-direction: column;
     }
@@ -376,33 +378,39 @@ $card__hover: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
 }
 
 @media screen and (max-width: 767px) {
+
+    .hamburger__menu {
+        z-index: 2;
+        width: 3rem;
+        height: 2.2rem;
+        position: fixed;
+        top: 5rem;
+        right: 5.3rem;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: all 0.5s;
+    }
+    
+    .burger__change {
+        transform: rotateZ(90deg);
+    }
+
+    .line {
+        width: 100%;
+        height: 0.2rem;
+        background-color: #000000;
+        transition: 1s linear;
+    }
+
+    .line_white {
+        background-color: $color-dark-s;
+    }
+
     .pets__header {
         padding-left: 1rem;
         padding-right: 0rem;
-
-        .hamburger__menu {
-            z-index: 2;
-            width: 3rem;
-            height: 2.2rem;
-            position: fixed;
-            top: 5rem;
-            right: 5.3rem;
-            cursor: pointer;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            transition: all 0.5s;
-        }
-        
-        .burger__change {
-            transform: rotateZ(90deg);
-        }
-
-        .line {
-            width: 100%;
-            height: 0.2rem;
-            background-color: #000000;
-        }
 
         .nav {
             display: none;
@@ -418,14 +426,16 @@ $card__hover: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
 
         .main__wrapper {
             width: 100%;
-            padding-top: 4.2rem;
+            padding-top: 16.2rem;
             padding-bottom: 4.25rem;
         }
 
         .main__pets__cards {
             margin-top: 4rem;
             padding: 0;
-            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         
         .pets__card__content {

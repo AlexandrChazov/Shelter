@@ -8,7 +8,13 @@ let popup__window = document.querySelector('.popup__window'),
     popup_span_4 = document.querySelector('.popup_span_4');
 
 
-    
+overlay.addEventListener('mouseover', () => {
+    popup__button.classList.add('popup_button_on_overlay_hover');
+});
+
+overlay.addEventListener('mouseout', () => {
+    popup__button.classList.remove('popup_button_on_overlay_hover');
+});
     
 pet_0.addEventListener('click', () => {
     popup__window.children[0].src = fullPetsList[0].img;
@@ -22,6 +28,7 @@ pet_0.addEventListener('click', () => {
 
     overlay.classList.add('dark');
     popup.classList.remove('popup__hide');
+    scroll_off();
 });
 
 pet_1.addEventListener('click', () => {
@@ -36,6 +43,7 @@ pet_1.addEventListener('click', () => {
 
     overlay.classList.add('dark');
     popup.classList.remove('popup__hide');
+    scroll_off();
 });
 
 pet_2.addEventListener('click', () => {
@@ -50,16 +58,14 @@ pet_2.addEventListener('click', () => {
 
     overlay.classList.add('dark');
     popup.classList.remove('popup__hide');
+    scroll_off();
 });
 
 popup__button.addEventListener('click', () => {
     overlay.classList.remove('dark');
     popup.classList.add('popup__hide');
+    scroll_off();
 });
 
-overlay.addEventListener('click', () => {
-    overlay.classList.remove('dark');
-    popup.classList.add('popup__hide');
-    burger.classList.remove('burger__change');
-})
+
 

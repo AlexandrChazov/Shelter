@@ -24,12 +24,30 @@
     margin-left: 5rem;
 }
 
-.popup__button {
+.popup__button__wrapper {
     text-align: right;
     margin-right: 0.8rem;
+    display: flex;
+    justify-content: flex-end;
 
-    img {
+    .popup__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 5.2rem;
+        height: 5.2rem;
+        box-shadow: inset 0 0 0 0.3rem #F1CDB3;
         cursor: pointer;
+        border-radius: 100%;
+        padding: 1.9rem;
+        border: none;
+        outline: none;
+        transition-duration: 0.5s;
+
+        &:hover {
+            box-shadow: none;
+            background-color: #F1CDB3;
+        }
     }
 }
 
@@ -189,4 +207,9 @@
 
 .popup__hide {
     display: none;
+}
+
+.popup_button_on_overlay_hover {
+    box-shadow: none;
+    background-color: #F1CDB3;
 }

@@ -10,6 +10,13 @@
     <link rel="stylesheet" href="./popup.css">
 </head>
 <body>
+    <!-- Бургер -->
+            <div class="hamburger__menu">
+                <div class="line line_1"></div>
+                <div class="line line_2"></div>
+                <div class="line line_3"></div>
+            </div>
+    <!-- Бургер -->
     <div class="sidebar2">
         <div class="logo2">
             <div class="logo__title2">
@@ -32,14 +39,14 @@
                     </a>
                 </li>
                 <li class="nav__list__item2">
-                    <a class="nav__list__link2 nav__list__link__disabled2">
+                    <p class="nav__list__link2 nav__list__link__disabled2">
                        Help the shelter
-                    </a>
+                    </p>
                 </li>
                 <li class="nav__list__item2">
-                    <a class="nav__list__link2 nav__list__link__disabled2">
+                    <p class="nav__list__link2 nav__list__link__disabled2">
                        Contacts
-                    </a>
+                    </p>
                 </li>
             </ul>
         </nav>
@@ -54,13 +61,6 @@
                     Shelter for pets in Boston
                 </div>
             </div>
-            <!-- Бургер -->
-                    <div class="hamburger__menu">
-                        <div class="line line_1"></div>
-                        <div class="line line_2"></div>
-                        <div class="line line_3"></div>
-                    </div>
-            <!-- Бургер -->
             <nav class="nav">
                 <ul class="nav__list">
                     <li class="nav__list__item">
@@ -74,14 +74,14 @@
                         </a>
                     </li>
                     <li class="nav__list__item">
-                        <a class="nav__list__link nav__list__link__disabled">
+                        <p class="nav__list__link nav__list__link__disabled">
                            Help the shelter
-                        </a>
+                        </p>
                     </li>
                     <li class="nav__list__item">
-                        <a class="nav__list__link nav__list__link__disabled">
+                        <p class="nav__list__link nav__list__link__disabled">
                            Contacts
-                        </a>
+                        </p>
                     </li>
                 </ul>
             </nav>
@@ -270,13 +270,13 @@
                     </h3>
                     <div class="footer__contacts__mail">
                         <img class="footer__contacts__mail__icon" src="../../assets/icons/icon-email.svg" alt="Mail">
-                        <a class="footer__contacts__mail__text" href="#">
+                        <a class="footer__contacts__mail__text" href="mailto:email@shelter.com">
                             email@shelter.com
                         </a>
                     </div>
                     <div class="footer__contacts__phone">
                         <img class="footer__contacts__mail__phone" src="../../assets/icons/icon-phone.svg" alt="Phone">
-                        <a class="footer__contacts__mail__text" href="#">
+                        <a class="footer__contacts__mail__text" href="tel:+136745677554">
                             +13 674 567 75 54
                         </a>
                     </div>
@@ -309,8 +309,10 @@
     </footer>
     <div class="popup popup__hide">
         <div class="popup__wrapper">
-            <div class="popup__button">
-                <img src="../../assets/images/modal_close_button.png" alt="Close button">
+            <div class="popup__button__wrapper">
+                <div class="popup__button">
+                    <img src="../../assets/images/Vector.png" alt="Close button">
+                </div>
             </div>
             <div class="popup__window">
                 <img src="../../assets/images/pets/pets-jennifer.png" alt="Jennifer Photo">
