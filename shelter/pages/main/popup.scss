@@ -27,6 +27,10 @@
 .popup__button {
     text-align: right;
     margin-right: 0.8rem;
+
+    img {
+        cursor: pointer;
+    }
 }
 
 .popup__window {

@@ -200,6 +200,16 @@ $card__hover: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
             &__item {
                 display: flex;
                 align-items: center;
+
+                a {
+                    text-decoration: none;
+                    
+                    &:hover {
+                        color: $color-light-s;
+                        cursor: pointer;
+                    }
+                }
+                
             }
 
             &__link {
@@ -223,6 +233,7 @@ $card__hover: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
 
 .logo {
     display: flex;
+    cursor: pointer;
     flex-direction: column; ///////////////////////////////////////
 
     &__title {
@@ -291,6 +302,11 @@ $card__hover: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
     &__button {
         margin-top: 4rem;
         @include button__primary;
+    }
+
+    .hero__button__link {
+        text-decoration: none;
+        color: $color-dark-3xl;
     }
 }
 
@@ -374,6 +390,7 @@ $card__hover: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
         
         .pets__card {
             display: flex;
+            cursor: pointer;
             flex-direction: column;
             border-radius: 0.9rem;
             margin: 0 4.5rem;
@@ -414,6 +431,11 @@ $card__hover: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
     }
     &__button {
         @include button__primary;
+
+        a {
+            text-decoration: none;
+            color: $color-dark-3xl;
+        }
     }
 }
 
@@ -754,7 +776,7 @@ $card__hover: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
                     z-index: 2;
                     width: 3rem;
                     height: 2.2rem;
-                    position: absolute;
+                    position: fixed;
                     top: 5rem;
                     right: 5.3rem;
                     cursor: pointer;

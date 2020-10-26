@@ -34,6 +34,10 @@
   margin-right: 0.8rem;
 }
 
+.popup__button img {
+  cursor: pointer;
+}
+
 .popup__window {
   background: #FAFAFA;
   border-radius: 9px;
