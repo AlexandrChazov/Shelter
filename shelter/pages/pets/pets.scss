@@ -338,7 +338,8 @@ $card__hover: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
     .main {
         .main__pets__cards {
             margin-top: 3rem;
-            padding-left: 9.5rem;
+            display: grid;
+            grid-template-columns: auto auto;
         }
     }
 

@@ -137,7 +137,10 @@
   margin-right: 0.2rem;
 }
 
-.popup__window .popup_span_1 {
+.popup__window .popup_span_1,
+.popup__window .popup_span_2,
+.popup__window .popup_span_3,
+.popup__window .popup_span_4 {
   font-weight: 700;
 }
 

@@ -1,3 +1,5 @@
+page_Number_Value = 1;
+
 let pets = [
     {
       "name": "Jennifer",
@@ -180,44 +182,48 @@ fullPetsList = sort863(fullPetsList);
 
 
 // Изменяем содержание карточек питомцев
-let pet_0 = document.getElementById("pet_0");
-    pet_0.children[0].src = fullPetsList[0].img;
-    pet_0.children[0].alt = fullPetsList[0].alt;
-    pet_0.children[1].children[0].innerText = fullPetsList[0].name;
+createPetsCards = () => {
+  let pet_0 = document.getElementById("pet_0");
+    pet_0.children[0].src = fullPetsList[page_Number_Value-1].img;
+    pet_0.children[0].alt = fullPetsList[page_Number_Value-1].alt;
+    pet_0.children[1].children[0].innerText = fullPetsList[page_Number_Value-1].name;
 
-let pet_1 = document.getElementById("pet_1");
-    pet_1.children[0].src = fullPetsList[1].img;
-    pet_1.children[0].alt = fullPetsList[1].alt;
-    pet_1.children[1].children[0].innerText = fullPetsList[1].name;
+  let pet_1 = document.getElementById("pet_1");
+      pet_1.children[0].src = fullPetsList[page_Number_Value].img;
+      pet_1.children[0].alt = fullPetsList[page_Number_Value].alt;
+      pet_1.children[1].children[0].innerText = fullPetsList[page_Number_Value].name;
 
-let pet_2 = document.getElementById("pet_2");
-    pet_2.children[0].src = fullPetsList[2].img;
-    pet_2.children[0].alt = fullPetsList[2].alt;
-    pet_2.children[1].children[0].innerText = fullPetsList[2].name;
+  let pet_2 = document.getElementById("pet_2");
+      pet_2.children[0].src = fullPetsList[page_Number_Value+1].img;
+      pet_2.children[0].alt = fullPetsList[page_Number_Value+1].alt;
+      pet_2.children[1].children[0].innerText = fullPetsList[page_Number_Value+1].name;
 
-let pet_3 = document.getElementById("pet_3");
-    pet_3.children[0].src = fullPetsList[3].img;
-    pet_3.children[0].alt = fullPetsList[3].alt;
-    pet_3.children[1].children[0].innerText = fullPetsList[3].name;
+  let pet_3 = document.getElementById("pet_3");
+      pet_3.children[0].src = fullPetsList[page_Number_Value+2].img;
+      pet_3.children[0].alt = fullPetsList[page_Number_Value+2].alt;
+      pet_3.children[1].children[0].innerText = fullPetsList[page_Number_Value+2].name;
 
-let pet_4 = document.getElementById("pet_4");
-    pet_4.children[0].src = fullPetsList[4].img;
-    pet_4.children[0].alt = fullPetsList[4].alt;
-    pet_4.children[1].children[0].innerText = fullPetsList[4].name;
+  let pet_4 = document.getElementById("pet_4");
+      pet_4.children[0].src = fullPetsList[page_Number_Value+3].img;
+      pet_4.children[0].alt = fullPetsList[page_Number_Value+3].alt;
+      pet_4.children[1].children[0].innerText = fullPetsList[page_Number_Value+3].name;
 
-let pet_5 = document.getElementById("pet_5");
-    pet_5.children[0].src = fullPetsList[5].img;
-    pet_5.children[0].alt = fullPetsList[5].alt;
-    pet_5.children[1].children[0].innerText = fullPetsList[5].name;
+  let pet_5 = document.getElementById("pet_5");
+      pet_5.children[0].src = fullPetsList[page_Number_Value+4].img;
+      pet_5.children[0].alt = fullPetsList[page_Number_Value+4].alt;
+      pet_5.children[1].children[0].innerText = fullPetsList[page_Number_Value+4].name;
 
-let pet_6 = document.getElementById("pet_6");
-    pet_6.children[0].src = fullPetsList[6].img;
-    pet_6.children[0].alt = fullPetsList[6].alt;
-    pet_6.children[1].children[0].innerText = fullPetsList[6].name;
+  let pet_6 = document.getElementById("pet_6");
+      pet_6.children[0].src = fullPetsList[page_Number_Value+5].img;
+      pet_6.children[0].alt = fullPetsList[page_Number_Value+5].alt;
+      pet_6.children[1].children[0].innerText = fullPetsList[page_Number_Value+5].name;
 
-let pet_7 = document.getElementById("pet_7");
-    pet_7.children[0].src = fullPetsList[7].img;
-    pet_7.children[0].alt = fullPetsList[7].alt;
-    pet_7.children[1].children[0].innerText = fullPetsList[7].name;
+  let pet_7 = document.getElementById("pet_7");
+      pet_7.children[0].src = fullPetsList[page_Number_Value+6].img;
+      pet_7.children[0].alt = fullPetsList[page_Number_Value+6].alt;
+      pet_7.children[1].children[0].innerText = fullPetsList[page_Number_Value+6].name;
+}
+
+createPetsCards();
 
 //document.querySelector("body > main > div.pets > div > div > div > div:nth-child(1) > img").src = fullPetsList[0].img

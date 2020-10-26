@@ -286,7 +286,10 @@
   }
   .main .main__pets__cards {
     margin-top: 3rem;
-    padding-left: 9.5rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
   }
   .main__wrapper {
     padding-bottom: 7.6rem;
