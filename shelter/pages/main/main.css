@@ -547,8 +547,8 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-column-gap: 12rem;
-          column-gap: 12rem;
+  -webkit-column-gap: 11rem;
+          column-gap: 11rem;
   row-gap: 5.5rem;
 }
 
@@ -560,6 +560,14 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 15em;
+}
+
+.help__item__icon {
+  width: 8em;
 }
 
 .help__item__title {
