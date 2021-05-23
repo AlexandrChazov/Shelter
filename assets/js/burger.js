@@ -41,9 +41,9 @@ overlay.addEventListener('click', () => {
 });
 
 logo.addEventListener('click', () => {
-    window.open("../../pages/main/main.html","_self")
+    window.open("index.html","_self")
 });
 
 logo2.addEventListener('click', () => {
-    window.open("../../pages/main/main.html","_self")
+    window.open("index.html","_self")
 })
