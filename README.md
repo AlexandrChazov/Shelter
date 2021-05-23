@@ -1,2 +1,1 @@
-# fireyourguns-JS2020Q3
-Private repository for @fireyourguns
+This project is published at https://fireyourguns.github.io/Shelter/
