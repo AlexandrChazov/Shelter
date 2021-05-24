@@ -1124,7 +1124,6 @@
     position: absolute;
     left: 6.3rem;
     bottom: 3.2rem;
-    z-index: 1;
   }
   .pets .slider__button__reverted {
     position: absolute;

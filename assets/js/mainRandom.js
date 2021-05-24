@@ -247,21 +247,18 @@ document.querySelector("#nextPage").addEventListener('click', (e) => {
 fullPetsList = sort863(fullPetsList);
 
 
-
 // Изменяем содержание карточек питомцев
-let pet_0 = document.getElementById("pet_0");
-    pet_0.children[0].src = fullPetsList[0].img;
-    pet_0.children[0].alt = fullPetsList[0].alt;
-    pet_0.children[1].children[0].innerText = fullPetsList[0].name;
 
-let pet_1 = document.getElementById("pet_1");
-    pet_1.children[0].src = fullPetsList[1].img;
-    pet_1.children[0].alt = fullPetsList[1].alt;
-    pet_1.children[1].children[0].innerText = fullPetsList[1].name;
+const changePetCard = (cardNumber) => {
+    const pet_0 = document.getElementById(`pet_${cardNumber}`);
+    pet_0.children[0].src = fullPetsList[cardNumber].img;
+    pet_0.children[0].alt = fullPetsList[cardNumber].alt;
+    pet_0.children[1].children[0].innerText = fullPetsList[cardNumber].name;
+}
 
-let pet_2 = document.getElementById("pet_2");
-    pet_2.children[0].src = fullPetsList[2].img;
-    pet_2.children[0].alt = fullPetsList[2].alt;
-    pet_2.children[1].children[0].innerText = fullPetsList[2].name;
+const petCards = document.querySelectorAll(".pets__card");
+for (let i = 0; i < petCards.length; i++) {
+  changePetCard(i);
+}
 
-//document.querySelector("body > main > div.pets > div > div > div > div:nth-child(1) > img").src = fullPetsList[0].img
+//--------------------------------------
