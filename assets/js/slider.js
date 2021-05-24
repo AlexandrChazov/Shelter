@@ -1,16 +1,51 @@
-let left_arrow = document.querySelector('slider__button'),
-right_arrow = document.querySelector('slider__button__reverted');
+const left_arrow = document.querySelector('.slider__button');
+const right_arrow = document.querySelector('.slider__button__reverted');
 
-left_arrow.addEventListener('click', () => {
-    pet_0.children[0].src = fullPetsList[0].img;
-    pet_0.children[0].alt = fullPetsList[0].alt;
-    pet_0.children[1].children[0].innerText = fullPetsList[0].name;
+let items = document.querySelectorAll('.pets__card');
+let currentItem = 0;
+let isEnabled = true;
 
-    pet_1.children[0].src = fullPetsList[1].img;
-    pet_1.children[0].alt = fullPetsList[1].alt;
-    pet_1.children[1].children[0].innerText = fullPetsList[1].name;
+function changeCurrentItem(n) {
+	currentItem = (n + items.length) % items.length;
+}
 
-    pet_2.children[0].src = fullPetsList[2].img;
-    pet_2.children[0].alt = fullPetsList[2].alt;
-    pet_2.children[1].children[0].innerText = fullPetsList[2].name;
+function hideItem(direction) {
+	isEnabled = false;
+	items[currentItem].classList.add(direction);
+	items[currentItem].addEventListener('animationend', function() {
+		this.classList.remove('active', direction);
+	});
+}
+
+function showItem(direction) {
+	items[currentItem].classList.add('next', direction);
+	items[currentItem].addEventListener('animationend', function() {
+		this.classList.remove('next', direction);
+		this.classList.add('active');
+		isEnabled = true;
+	});
+}
+
+function nextItem(n) {
+	hideItem('to-left');
+	changeCurrentItem(n + 1);
+	showItem('from-right');
+}
+
+function previousItem(n) {
+	hideItem('to-right');
+	changeCurrentItem(n - 1);
+	showItem('from-left');
+}
+
+left_arrow.addEventListener('click', function() {
+	if (isEnabled) {
+		previousItem(currentItem);
+	}
+});
+
+right_arrow.addEventListener('click', function() {
+	if (isEnabled) {
+		nextItem(currentItem);
+	}
 });

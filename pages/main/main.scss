@@ -382,51 +382,70 @@ $card__hover: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
     &__slider {
         display: flex;
         align-items: center;
+        overflow: hidden;
 
         .pets__cards {
-            display: flex;
-            padding: 6rem 0.8rem;
+            // display: block;
+            position: relative;  //не влияет
+            width: 100%;
+            overflow: hidden;   // особо не влияет
+            // padding: 6rem 0.8rem;
         }
 
         .pets__card {
+          display: none;
+          position: relative;
+          animation: 2s ease-in-out;
+          margin: 0 auto;
+          cursor: pointer;
+          flex-direction: column;
+          border-radius: 0.9rem;
+
+          &:hover {
+            box-shadow: $card__hover;
+          }
+
+          &__content {
             display: flex;
-            cursor: pointer;
             flex-direction: column;
-            border-radius: 0.9rem;
-            margin: 0 4.5rem;
+            padding-bottom: 3rem;
+            align-items: center;
+          }
 
-            &:hover {
-                box-shadow: $card__hover;
-            }
+          &__title {
+            margin: 3.1rem 0;
+            text-align: center;
+            @include h4;
+          }
 
-            &__image {
-                width: 100%;
-            }
+          &__button {
+            @include button__secondary;
+          }
+        }
 
-            &__content {
-                display: flex;
-                flex-direction: column;
-                padding-bottom: 3rem;
-                align-items: center;
-            }
+        .pets__card.active,
+        .pets__card.next {
+          display: flex;
+        }
 
-            &__title {
-                margin: 3.1rem 0;
-                text-align: center;
-                @include h4;
-            }
-
-            &__button {
-                @include button__secondary;
-            }
+        .next {
+          position: absolute;
+          top: 0;
+          width: auto;
         }
 
         .slider__button {
-            @include slider_button;
+          left: 20%;
+          position: absolute;
+          transform: translate(-50%, -50%);
+          @include slider_button;
         }
+
         .slider__button__reverted {
-            transform: rotate(180deg);
-            @include slider_button;
+          left: 80%;
+          position: absolute;
+          transform: translate(-50%, -50%) rotate(180deg);
+          @include slider_button;
         }
     }
     &__button {
@@ -600,6 +619,42 @@ $card__hover: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
     }
 }
 
+.pets__card.active.to-left {
+  animation-name: left;
+}
+
+.pets__card.next.from-right {
+  animation-name: right;
+}
+
+.pets__card.active.to-right {
+  animation-name: right;
+  animation-direction: reverse;
+}
+
+.pets__card.next.from-left {
+  animation-name: left;
+  animation-direction: reverse;
+}
+
+@keyframes left {
+  from {
+    left: 0
+  }
+  to {
+    left: -100%
+  }
+}
+
+@keyframes right {
+  from {
+    left: 100%
+  }
+  to {
+    left: 0%
+  }
+}
+
 @media screen and (max-width: 1279px) {
     .header {
         top: 3rem;
@@ -660,15 +715,16 @@ $card__hover: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
     }
 
     .pets {
-        .pets__card__woody {
-            display: none;
-        }
 
         &__cards {
 
             .pets__card {
             margin: 0 2rem;
             }
+
+            // .pets__card:nth-child(3) {
+            //   display: none;
+            // }
         }
 
 
@@ -676,11 +732,6 @@ $card__hover: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
             width: 27rem;
             height: 27rem;
         }
-
-
-        // .slider__button__reverted {
-        //     margin-right: 3.2rem;
-        // }
     }
 
     .help {
@@ -887,9 +938,9 @@ $card__hover: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
             letter-spacing: 0.15rem;
         }
 
-        .pets__cards div + div {
-            display: none;
-        }
+        // .pets__card:nth-child(2) {
+        //   display: none;
+        // }
 
         &__slider {
             position: relative;

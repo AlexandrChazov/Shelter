@@ -165,7 +165,7 @@ const sort863 = (list) => {
   let length = list.length;
   for (let i = 0; i < length / 8; i++) {
     const uniqueStepList = [];
-    for (j = 0; j < list.length; j++) {
+    for (let j = 0; j < list.length; j++) {
       if (uniqueStepList.length >= 8) {
         break;
       }
