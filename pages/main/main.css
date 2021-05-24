@@ -335,6 +335,7 @@
       -ms-flex-align: center;
           align-items: center;
   overflow: hidden;
+  margin-top: 3rem;
 }
 
 .pets__slider .pets__cards {
@@ -346,8 +347,8 @@
 .pets__slider .pets__card {
   display: none;
   position: relative;
-  -webkit-animation: 2s ease-in-out;
-          animation: 2s ease-in-out;
+  -webkit-animation: 1s ease-in-out;
+          animation: 1s ease-in-out;
   margin: 0 auto;
   cursor: pointer;
   -webkit-box-orient: vertical;
@@ -1114,7 +1115,7 @@
             align-items: flex-end;
   }
   .pets .pets__cards {
-    padding: 4rem 0rem 11.4rem 0rem;
+    padding: 0 0rem 11.4rem 0rem;
   }
   .pets__card {
     margin: 0;
@@ -1122,12 +1123,13 @@
   .pets .slider__button {
     position: absolute;
     left: 6.3rem;
-    bottom: 4.2rem;
+    bottom: 3.2rem;
+    z-index: 1;
   }
   .pets .slider__button__reverted {
     position: absolute;
     right: 6.3rem;
-    bottom: 4.2rem;
+    bottom: 3.2rem;
   }
   .help {
     padding-top: 0;

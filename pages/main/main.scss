@@ -383,6 +383,7 @@ $card__hover: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
         display: flex;
         align-items: center;
         overflow: hidden;
+        margin-top: 3rem;
 
         .pets__cards {
             // display: block;
@@ -395,7 +396,7 @@ $card__hover: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
         .pets__card {
           display: none;
           position: relative;
-          animation: 2s ease-in-out;
+          animation: 1s ease-in-out;
           margin: 0 auto;
           cursor: pointer;
           flex-direction: column;
@@ -948,7 +949,7 @@ $card__hover: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
         }
 
         .pets__cards {
-            padding: 4rem 0rem 11.4rem 0rem;
+            padding: 0 0rem 11.4rem 0rem;
         }
 
         &__card {
@@ -958,13 +959,14 @@ $card__hover: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
         .slider__button {
             position: absolute;
             left: 6.3rem;
-            bottom: 4.2rem;
+            bottom: 3.2rem;
+            z-index: 1;
         }
 
         .slider__button__reverted {
             position: absolute;
             right: 6.3rem;
-            bottom: 4.2rem;
+            bottom: 3.2rem;
         }
     }
 
