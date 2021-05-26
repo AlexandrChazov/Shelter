@@ -1,10 +1,11 @@
-const burger = document.querySelector('.hamburger__menu'),
-     sidebar = document.querySelector('.sidebar2'),
-        logo = document.querySelector('.logo'),
-       logo2 = document.querySelector('.logo2'),
-        main = document.querySelector('main'),
-          el = document.getElementsByTagName('body'),
-burger_lines = document.querySelectorAll('.line');
+const popup = document.querySelector('.popup');
+const burger = document.querySelector('.hamburger__menu');
+const sidebar = document.querySelector('.sidebar2');
+const logo = document.querySelector('.logo');
+const logo2 = document.querySelector('.logo2');
+const main = document.querySelector('main');
+const el = document.getElementsByTagName('body');
+const burger_lines = document.querySelectorAll('.line');
 
 scroll_off = () => {
     if (el[0].style.overflow !== 'hidden') {
@@ -12,7 +13,7 @@ scroll_off = () => {
     } else {
         el[0].style.overflow = '';
     }
-};          
+};
 
 burger.addEventListener('click', () => {
     sidebar.classList.toggle('sidebar__change');
@@ -21,7 +22,7 @@ burger.addEventListener('click', () => {
     burger_lines[0].classList.toggle('line_white');
     burger_lines[1].classList.toggle('line_white');
     burger_lines[2].classList.toggle('line_white');
-    
+
     scroll_off();
     overlay.classList.toggle('dark');
 });
@@ -36,7 +37,7 @@ overlay.addEventListener('click', () => {
     burger_lines[2].classList.toggle('line_white');
 
     popup.classList.add('popup__hide');
-    
+
     scroll_off();
 });
 
