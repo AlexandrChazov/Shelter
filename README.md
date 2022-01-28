@@ -1,1 +1,1 @@
-This project is published at https://fireyourguns.github.io/Shelter/
+This project is published at https://AlexandrChazov.github.io/Shelter/
